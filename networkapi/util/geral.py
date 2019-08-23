@@ -187,7 +187,6 @@ class AppCacheExtend(AppCache):
         Loads the app with the provided fully qualified name, and returns the
         model module.
         """
-        self.handled[app_name] = None
         self.nesting_level += 1
         app_module = import_module(app_name)
         try:

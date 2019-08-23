@@ -1,7 +1,7 @@
 #
 # Base stage
 #
-FROM alpine:latest as base
+FROM alpine:3.7  as base
 
 RUN apk add --update --no-cache py2-pip \
                                 libldap \

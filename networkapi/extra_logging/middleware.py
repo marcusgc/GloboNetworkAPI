@@ -85,7 +85,7 @@ class ExtraLoggingMiddleware(object):
         request.id = identity
 
         msg = u'INICIO da requisição %s. Data: [%s].' % (
-            request.method, request.raw_post_data)
+            request.method, request.body)
         logger.debug(search_hide_password(msg))
 
     def process_response(self, request, response):

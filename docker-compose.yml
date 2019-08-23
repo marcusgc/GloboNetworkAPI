@@ -29,6 +29,8 @@ services:
     cache:
         container_name: netapi_cache
         image: memcached:1.4.33
+        command:
+            - "-I 5m"
         ports:
             - "11211"
         networks:
@@ -53,7 +55,7 @@ services:
 
     netapi:
         container_name: netapi_app
-        image: globocom/networkapi:latest
+        image: networkapi:latest
         restart: always
         ports:
             - "127.0.0.1:8000:8000"
